@@ -6,7 +6,8 @@ npm-debug.log
 # IntelliJ
 *.iml
 /.idea
+.vscode
 
 
-react-redux/
 pesudoyoutube/
+react-redux/
