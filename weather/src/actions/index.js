@@ -11,6 +11,9 @@ export const FEATCH_WEATHER = 'FEATCH_WEATHER'; // in order to action type consi
 
 // featchWeather is an actionCreator, it will return an action , an object with a type property
 export function featchWeather(city){
+  if(!city){
+    city = "Portland";
+  }
   const url = `${ROOT_URL}&q=${city},us`;
 
   const request = axios.get(url); // return a promise

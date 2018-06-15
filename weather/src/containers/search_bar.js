@@ -16,15 +16,15 @@ class SearchBar extends React.Component {
   }
 
   onInputChange(event){
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.setState({term: event.target.value});
   }
 
   onFormSubmit(event){
-    let city = this.state.term;
-    // console.log(city);
     event.preventDefault();
-    this.props.featchWeather(city)
+
+    let city = this.state.term;
+    this.props.featchWeather(city);
     this.setState({term: ''});
   }
 

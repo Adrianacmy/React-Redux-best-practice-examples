@@ -1,16 +1,37 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+// import { Sparklines, SparklinesLine } from 'react-sparklines';
+import Chart  from '../components/chart';
+// import GoogleMap from '../components/google_map';
+
 
 class WeatherList extends Component {
-  renderWeather(cityDate) {
-    return
-    (
-      <tr>
+
+  renderWeather(cityData) {
+    // console.log(citydata);
+    const name = cityData.city.name;
+    const temps = cityData.list.map((weather) => weather.main.temp);
+    const humidity = cityData.list.map((weather) => weather.main.humidity);
+    const pressure = cityData.list.map((weather) => weather.main.pressure);
+    const { lon, lat } = cityData.city.coord;
+
+    // console.log(name, temps, humidity, pressure);
+    return (
+      <tr key={name}>
         <td>
-          {cityDate.list}
+          <GoogleMap lat={lat} lon={lon}/>
+        </td>
+        <td>
+          <Chart color="green" data={temps} unit="K" />
+        </td>
+        <td>
+          <Chart color="green" data={humidity} unit="hPa"/>
+        </td>
+        <td>
+          <Chart color="green" data={pressure} unit="%"/>
         </td>
       </tr>
-    )
+    );
   }
 
   render() {
@@ -25,21 +46,22 @@ class WeatherList extends Component {
           </tr>
         </thead>
         <tbody>
-          {this.state.weather.map(this.renderWeather)}
+          {this.props.weather.map(this.renderWeather)}
         </tbody>
       </table>
     );
   }
+
 }
 
 
 
-function mapStateToProps(weather) {
-  // return {
-  //   weather: state.weather
-  // };  
+function mapStateToProps(state) {
+  return {
+    weather: state.weather
+  };
   // shorten above code to below, since the key and value are identical
-  return { weather };
+  // return { weather };
 }
 
 export default connect(mapStateToProps)(WeatherList);
