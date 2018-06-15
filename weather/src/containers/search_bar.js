@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreaters } from 'redux';
+import { bindActionCreators } from 'redux';
 
-import featchWeather from '../actions/index';
+import { featchWeather } from '../actions/index';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -21,8 +21,10 @@ class SearchBar extends React.Component {
   }
 
   onFormSubmit(event){
+    let city = this.state.term;
+    // console.log(city);
     event.preventDefault();
-    this.props.featchWeather(this.state.term);
+    this.props.featchWeather(city)
     this.setState({term: ''});
   }
 
@@ -45,7 +47,8 @@ class SearchBar extends React.Component {
 
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreaters({featchWeather}, dispatch);
+
+  return bindActionCreators({featchWeather}, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(SearchBar); // null: there is no state to pass here
