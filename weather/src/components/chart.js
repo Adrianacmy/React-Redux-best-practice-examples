@@ -9,15 +9,15 @@ function average(data){
 }
 
 
-// export default (props) => {
-//   return (
-//     <div>
-//       <Sparkinlines height={120} width={130} data={props.data}>
-//         <SparkinlinesLine color={props.color}/>
-//         <SparklinesReferenceLine type="mean"/>
-//       </Sparkinlines> 
-//       <div>{average(props.data)} {props.unit}</div>
-//     </div>   
-//   );
-// };
+export default (props) => {
+  return (
+    <div>
+      <Sparkinlines height={120} width={130} data={props.data}>
+        <SparkinlinesLine color={props.color}/>
+        <SparklinesReferenceLine type="mean"/>
+      </Sparkinlines> 
+      <div>{average(props.data)} {props.unit}</div>
+    </div>   
+  );
+};
 

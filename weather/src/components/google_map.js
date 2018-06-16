@@ -1,29 +1,31 @@
 import React from 'react';
-import { GoogleMapLoader, GoogleMap }  from "react-google-maps";
+// import { GoogleMapLoader, GoogleMap }  from "react-google-maps";
 
 
 
-// class GooglMap extends React.Component {
+class GooglMap extends React.Component {
 
-//   componentDidMount() {
-//     new Google.maps.Map(this.refs.map, {// make third lib work with react
-//       zoom: 13,
-//       center: {
-//         lat: this.props.lat,
-//         lng: this.props.lon
-//       }
+  componentDidMount() {
+    new Google.maps.Map(this.refs.map, {// make third lib work with react
+      zoom: 13,
+      center: {
+        lat: this.props.lat,
+        lng: this.props.lon
+      }
 
-//     });
-//   }
+    });
+  }
 
-//   render() {
-//     return (
-//       <div ref="map"></div>
+  render() {
+    return (
+      <div ref="map"></div>
 
-//     );
-//   }
+    );
+  }
 
-// }
+}
+
+export default GoogleMap;
 
 // export default GooglMap;
 
