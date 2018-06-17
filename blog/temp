@@ -1,0 +1,62 @@
+<form>
+      <Field 
+        // label='Post Title'
+        // name='title'
+        // component={}
+      />
+       <Field 
+        // label='Categories'
+        // name='categories'
+        // component={this.renderField}
+      /> 
+      <Field 
+        // label='Content'
+        // name='content'
+        // component={this.renderField}
+      />
+      </form>
+
+        // renderField(field){
+  //   return (
+  //     <div className="input-group">
+
+  //       <label>{field.label}</label>
+  //       <input 
+  //       className="form-control" 
+  //       type="text"
+  //        {...field.input}
+
+  //       />
+  //       {field.meta.error}
+  //     </div>
+  //   );
+  // }
+
+
+  function validate(values){
+  console.log(values);
+  const  errors = {};
+  if（!values.title){
+    errors.title = 'Enter a title';
+  }
+  if(!values.categories){
+    errors.categories = 'Enter a categories';
+  }
+
+  if(!values.content){
+    errors.content = 'Enter some content';
+  }
+
+  // any error will caused invalied
+  return erros;
+
+
+}// will be called automatically at certain point
+
+// export default PostsNew;
+
+export default reduxForm({
+  validate: validate,
+  form: 'postsNewForm'
+
+})(PostsNew)

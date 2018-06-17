@@ -7,7 +7,7 @@ import promise from 'redux-promise';
 
 
 import PostsIndex from './components/posts_index';
-import PostsNew from './components/posts_new';
+import  PostsNew  from './components/posts_new';
 
 
 // import App from './components/app';

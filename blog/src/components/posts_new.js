@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-class PostsNew extends Component{
-
+export default class PostsNew extends React.Component{
   render(){
     return (
-      <div>
-        add a post
-      </div>
-    )
+      <div>add a post</div>
+    );
   }
 }
 
 
-export default PostsNew;
