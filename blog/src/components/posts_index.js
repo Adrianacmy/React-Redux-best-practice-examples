@@ -16,8 +16,10 @@ class PostsIndex extends React.Component {
 
   renderPosts() {
     return _.map(this.props.posts, post => {
+      const className = `${ post.title ? 'list-group-item' : '' }`;
+      
       return (
-        <li key={post.id} className="list-group-item">
+        <li key={post.id} className={className}>
           {post.title}
         </li>
       );
