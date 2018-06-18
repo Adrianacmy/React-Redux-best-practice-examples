@@ -19,7 +19,7 @@ class PostsIndex extends React.Component {
       const className = `${ post.title ? 'list-group-item' : '' }`;
       return (
         <li key={post.id} className={className}>
-          {post.title}
+          <Link to={`/posts/${post.id}`}>{post.title}</Link>
         </li>
       );
     });
@@ -30,7 +30,7 @@ class PostsIndex extends React.Component {
     return (
       <div>
         <div className="text-xs-right">
-          <Link to="posts/new" className="btn btn-success">
+          <Link to="/posts/new" className="btn btn-success">
             Add a post
           </Link>
         </div>
