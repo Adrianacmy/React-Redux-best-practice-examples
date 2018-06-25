@@ -40,6 +40,10 @@ npm install --save redux-form // form validation
 
 ```
 
+### [Queue](./ep-Re)
+
+- Epicodus course project
+
 
 ## Known Bugs
 
