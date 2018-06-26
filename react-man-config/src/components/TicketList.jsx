@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Ticket from './Ticket';
 
 function TicketList(){
   return (
-    <Ticket />
+    <Ticket 
+      names='Kale'
+      location='7A'
+      issue='wrong'
+    />
 
   );
 }

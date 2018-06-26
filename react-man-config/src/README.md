@@ -1,3 +1,8 @@
+# Help Queue
+
+
+## Manually config
+
 - run server `webpack-dev-server`
 
 - programmatically generate an index.html file using Webpack. 
