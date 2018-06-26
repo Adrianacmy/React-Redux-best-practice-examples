@@ -3,6 +3,9 @@
 
 ## Manually config
 
+- `npm install eslint --save-dev
+- `$ npm install eslint-plugin-react --save-dev`
+
 - run server `webpack-dev-server`
 
 - programmatically generate an index.html file using Webpack. 
@@ -14,4 +17,4 @@
 - `npm install eslint-loader --save-dev`
 - $ npm run lint --fix doesn't seem to do anything. This is because we had to include that exit keyword in our npm script in order to get it to display our linting results in the console:
 
-- `npm run lint-fix` to fix errors
+- `npm run lint-fix` to fix all linte errors
