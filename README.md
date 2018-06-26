@@ -44,6 +44,10 @@ npm install --save redux-form // form validation
 
 - Epicodus course project
 
+### [Personal home page v2.0](./php2)
+
+- A blog with Gatsby-React-GraphicQL
+- [Live Demo](adrianawritescode.com/blog)
 
 ## Known Bugs
 
