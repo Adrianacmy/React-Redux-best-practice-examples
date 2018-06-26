@@ -13,7 +13,7 @@ Small apps with React, Redux on my learning journey to React master >_<
 
 ## Apps
 
-### [Weather](./weather/) 
+### [Weather Forcast](./weather/) 
 
 ![weather](./weather/imgs/weather.png)
 
@@ -27,7 +27,7 @@ npm install --save react-google-maps // integrating google map
 
 ```
 
-### [Blog](./blog/) 
+### [React Blog](./blog/) 
 
 ![blog](./blog/img/preview.png)
 
@@ -40,14 +40,15 @@ npm install --save redux-form // form validation
 
 ```
 
-### [Queue](./ep-Re)
+### [Help Queue](./ep-Re)
 
 - Epicodus course project
 
-### [Personal home page v2.0](./php2)
+### [Gatsby-React-GraphQL Blog v2.0](./php2)
 
-- A blog with Gatsby-React-GraphicQL
 - [Live Demo](http://adrianawritescode.com/blog)
+
+<hr/>
 
 ## Known Bugs
 
