@@ -37,8 +37,8 @@ class NewTicket extends React.Component{
   }
 
   // handleClick(){
-    // this.setState({formVisible: true});
-    // console.log('current formVisible ' + this.state.formVisible);
+  // this.setState({formVisible: true});
+  // console.log('current formVisible ' + this.state.formVisible);
   // }
 
   handleOnQuestionConfirmation(){
