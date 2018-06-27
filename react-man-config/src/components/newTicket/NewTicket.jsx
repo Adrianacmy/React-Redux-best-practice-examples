@@ -33,12 +33,16 @@ class NewTicket extends React.Component{
       formVisible: false
     };
 
-    this.handleClick = this.handleClick.bind(this);
+    this.handleOnQuestionConfirmation = this.handleOnQuestionConfirmation.bind(this);
   }
 
-  handleClick(){
-    this.setState({formVisible: true});
+  // handleClick(){
+    // this.setState({formVisible: true});
     // console.log('current formVisible ' + this.state.formVisible);
+  // }
+
+  handleOnQuestionConfirmation(){
+    this.setState({formVisible: true});
   }
 
   render(){
@@ -46,7 +50,7 @@ class NewTicket extends React.Component{
     if(this.state.formVisible){
       thisContent = <NewTicketForm />;
     }else{
-      thisContent = <QuestionForm />;
+      thisContent = <QuestionForm onQuestionConfirmation={this.handleOnQuestionConfirmation}/>;
     }
     return (
       <div>
