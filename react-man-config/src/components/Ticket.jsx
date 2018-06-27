@@ -10,12 +10,6 @@ function Ticket(props){
 
   return (
     <div>
-    <style jsx>{`
-      div{
-        background-color: green;
-      }
-    `}
-    </style>
       <h3>{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
       <hr/>
@@ -28,4 +22,5 @@ Ticket.propTypes = {
   location: PropTypes.string,
   issue: PropTypes.string
 };
+
 export default Ticket;

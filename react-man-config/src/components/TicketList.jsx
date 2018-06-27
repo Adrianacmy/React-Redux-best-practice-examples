@@ -1,7 +1,7 @@
 import React from 'react';
 import Ticket from './Ticket';
 
-const masterTicketList = [
+let masterTicketList = [
   {
     names: 'Thato and Haley',
     location: '3A',
@@ -22,24 +22,16 @@ const masterTicketList = [
 function TicketList(){
   return (
     <div>
-      <style jsx global>
-        {`
-      .green{
-        color: green;
-      }
-    `}
-      </style>
-      {
-        masterTicketList.map((ticket, index) => {
-          <Ticket 
-            className='green'
-            names={ ticket.names }
-            location= { ticket.location }
-            issue={ ticket.issue }
-            key={ index }/>;
-        })
-      }
-    
+    {
+      masterTicketList.map( (ticket, index) => 
+        <Ticket 
+          className='green'
+          names={ ticket.names }
+          location= { ticket.location }
+          issue={ ticket.issue }
+          key={ index }/>
+      )
+    }
     </div>
     
 
