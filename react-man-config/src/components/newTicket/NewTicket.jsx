@@ -1,5 +1,6 @@
 import React from 'react';
-
+import NewTicketForm from './NewTicketForm';
+import QuestionForm from './QuestionForm';
 
 // function NewTicket(){
 //   return (
@@ -41,10 +42,15 @@ class NewTicket extends React.Component{
   }
 
   render(){
+    let thisContent = null;
+    if(this.state.formVisible){
+      thisContent = <NewTicketForm />;
+    }else{
+      thisContent = <QuestionForm />;
+    }
     return (
       <div>
-        <p>This is about to be a new ticket</p>
-        <p onClick={this.handleClick}>Click me to show a form</p>
+        { thisContent }
       </div>
     );
   }
