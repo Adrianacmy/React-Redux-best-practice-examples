@@ -2,14 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Ticket(props){
-  let ticketStyle = {
-    backgroundColor: 'pink',
-    fontSize: '3rem',
-    padding: '4rem'
-  };
+  // let ticketStyle = {
+  //   backgroundColor: 'pink',
+  //   fontSize: '3rem',
+  //   padding: '4rem'
+  // };
 
   return (
-    <div style={ticketStyle} >
+    <div>
+    <style jsx>{`
+      div{
+        background-color: green;
+      }
+    `}
+    </style>
       <h3>{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
       <hr/>
