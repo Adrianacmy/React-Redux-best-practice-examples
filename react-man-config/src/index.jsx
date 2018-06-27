@@ -27,8 +27,8 @@ if (module.hot) {
 
 /*eslint-enable */
 
-
 // triggers the swapping process. 
 //These special tags disable ESLint right before the first appearance of module, then immediately re-enable it after the block of code; essentially telling ESLint to ignore these few lines
+
 // <AppContainer> is a wrapper component from React-Hot-Loader that handles
-// reloading the application and sending errors if anything goes awry.
+// reloading the application and sending errors if anything goes awrong.
