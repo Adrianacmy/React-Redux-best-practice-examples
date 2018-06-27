@@ -6,7 +6,7 @@ import TicketList from './TicketList';
 import Header from './header/Header';
 
 import NewTicket from './newTicket/NewTicket';
-import Ticket from './Ticket';
+import Error404 from './404';
 
 
 
@@ -17,6 +17,7 @@ function App(){
     <Switch>
       <Route exact path='/' component={TicketList} />
       <Route path='/newticket' component={NewTicket} />
+      <Route component={Error404} />
     </Switch>
     </div>
   );

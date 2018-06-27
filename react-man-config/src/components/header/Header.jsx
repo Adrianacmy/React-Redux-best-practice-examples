@@ -6,7 +6,7 @@ import styles from './Header.css'; //css module
 function Header(){
   return (
     <h1 className={ styles.myheader }>
-      Help Queue
+      Help Queue &nbsp;
       <Link to="/">Home</Link> | <Link to='/newTicket'>Create Ticket</Link> 
     </h1>
   );
