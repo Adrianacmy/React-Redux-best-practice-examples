@@ -30,6 +30,7 @@ module.exports = {
 
   module: {
     rules: [
+      
       {
         test: /\.(png|gif|jp(e*)g|svg)$/,
         use: {

@@ -28,8 +28,6 @@ import PropTypes from 'prop-types';
 class NewTicket extends React.Component{
   
   constructor(props){
-    console.log('s');
-
     super(props);
     this.state = {
       formVisible: false
