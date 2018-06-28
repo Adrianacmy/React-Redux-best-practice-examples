@@ -1,20 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
-function NewTicketForm(){
+
+function NewTicketForm(props){
   let _names = null;
   let _location = null;
   let _issue = null;
 
   function handleNewTicketSubmition(event) {
     event.preventDefault();
-    console.log(_names);
-    console.log(_location);
-    console.log(_issue);
+    props.onNewTicketCreation({names: _names.value, location: _location.value, issue: _issue.value});
     _names.value = '';
     _location.value = '';
     _issue.value = '';
   }
+
+
 
   return (
     <div>
@@ -38,6 +40,11 @@ function NewTicketForm(){
     </div>
   );
 }
+
+
+NewTicketForm.propTypes = {
+  onNewTicketCreation: PropTypes.func
+};
 
 // class NewTicket extends React.Component{
 

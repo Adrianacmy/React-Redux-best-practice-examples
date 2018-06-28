@@ -1,7 +1,7 @@
 import React from 'react';
 import NewTicketForm from './NewTicketForm';
 import QuestionForm from './QuestionForm';
-
+import PropTypes from 'prop-types';
 // function NewTicket(){
 //   return (
 //     <div>
@@ -26,8 +26,10 @@ import QuestionForm from './QuestionForm';
 // }
 
 class NewTicket extends React.Component{
-
+  
   constructor(props){
+    console.log('s');
+
     super(props);
     this.state = {
       formVisible: false
@@ -45,11 +47,13 @@ class NewTicket extends React.Component{
     this.setState({formVisible: true});
   }
 
+ 
+
   render(){
     let thisContent = null;
-    if(this.state.formVisible){
-      thisContent = <NewTicketForm />;
-    }else{
+    if (this.state.formVisible){
+      thisContent = <NewTicketForm onNewTicketCreation={this.props.onNewTicketCreation}/>;
+    } else {
       thisContent = <QuestionForm onQuestionConfirmation={this.handleOnQuestionConfirmation}/>;
     }
     return (
@@ -59,7 +63,9 @@ class NewTicket extends React.Component{
     );
   }
 }
-
+NewTicket.propTypes = {
+  onNewTicketCreation: PropTypes.func
+};
 
 
 export default NewTicket;
