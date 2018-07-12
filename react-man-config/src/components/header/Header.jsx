@@ -7,7 +7,7 @@ function Header(){
   return (
     <h1 className={ styles.myheader }>
       Help Queue &nbsp;
-      <Link to="/">Home</Link> | <Link to='/newTicket'>Create Ticket</Link> 
+      <Link to="/">Home</Link>| <Link to="/admin">Admin</Link> | <Link to='/newTicket'>Create Ticket</Link> 
     </h1>
   );
 }
